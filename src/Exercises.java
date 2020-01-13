@@ -1,3 +1,5 @@
+import java.lang.*;
+
 public class Exercises {
 	
 	public boolean commonEnd(int[] a, int[] b) {
@@ -48,18 +50,44 @@ public class Exercises {
 		return maximum - mininum;
 	}
 	
-	public double bigest(double[] numbers) {
+	public double biggest(double[] numbers) {
 		if(numbers == null) {
 			return 1/0;
 		} else if (numbers.length < 3 || numbers.length % 2 == 0) {
 			return 1/0;
 		}
 		double first = numbers[0];
-		double middle = numbers[(numbers.length / 2) - 1];
+		double middle = numbers[(int) Math.floor(numbers.length / 2)];
 		double last = numbers[numbers.length - 1];
 		double maximum = (first > middle && first > last) ? first :
 		(middle > last) ? middle :
 		last;
 		return maximum;
+	}
+	
+	public String[] middle(String[] words) {
+		String[] empty = new String[0];
+		boolean containsNull = false;
+		for(int i = 0; i < words.length; i ++) {
+			containsNull = (words[i] == null) ? true : false;
+			if(containsNull) {
+				break;
+			}
+		}
+		if(words == null) {
+			return empty;
+		} else if(containsNull) {
+			return empty;
+		} else if (words.length < 3 || words.length % 2 == 0) {
+			return empty;
+		}
+		String first = words[(int) Math.floor(words.length / 2) - 1];
+		String middle = words[(int) Math.floor(words.length / 2)];
+		String last = words[(int) Math.floor(words.length / 2) + 1];
+		String[] returnArray = new String[3];
+		returnArray[0] = first;
+		returnArray[0] = middle;
+		returnArray[0] = last;
+		return returnArray;
 	}
 }
