@@ -1,5 +1,5 @@
 public class Exercises {
-
+	
 	public boolean commonEnd(int[] a, int[] b) {
 		if (a == null || a.length == 0 || b == null || b.length == 0) {
 			return false;
@@ -16,8 +16,20 @@ public class Exercises {
 		
 		// write your code here
 	
-	public String[] endsMeet(String[] strgArray) {
-		String[] a = {strgArray[0], strgArray[strgArray.length - 1]};
+	public String[] endsMeet(String[] values, int n) {
+		String[] empty = new String[0];
+		if(values == null) {
+			return empty;
+		} else if(values.length < n) {
+			return empty;
+		} else if(n < 0) {
+			return empty;
+		}
+		String[] a = new String[(2 * n)];
+		for(int i = 0; i < n; i ++) {
+			a[i] = values[i];
+			a[a.length - i] = values[values.length - i];
+		}
 		return a;
 	}
 }
