@@ -1,5 +1,3 @@
-import java.lang.*;
-
 public class Exercises {
 	
 	public boolean commonEnd(int[] a, int[] b) {
