@@ -105,4 +105,22 @@ public class Exercises {
 		}
 		return false;
 	}
+	
+	public boolean everywhere(int values[], int x) {
+		if(values == null) {
+			return false;
+		} else if (values.length < 1) {
+			return false;
+		}
+		for(int i = 1; i < values.length - 1; i ++) {
+			if(values[i] != x) {
+				if(values [i - 1] != x) {
+					return false;
+				} else if(values [i + 1] != x) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
 }
