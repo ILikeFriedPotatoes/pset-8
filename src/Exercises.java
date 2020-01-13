@@ -12,9 +12,12 @@ public class Exercises {
 		} else {
 			return false;
 		}
+	}
 		
 		// write your code here
+	
+	public String[] endsMeet(String[] strgArray) {
+		String[] a = {strgArray[0], strgArray[strgArray.length - 1]};
+		return a;
 	}
-	
-	
 }
