@@ -71,12 +71,10 @@ public class Exercises {
 		for(int i = 0; i < words.length; i ++) {
 			containsNull = (words[i] == null) ? true : false;
 			if(containsNull) {
-				break;
+				return empty;
 			}
 		}
 		if(words == null) {
-			return empty;
-		} else if(containsNull) {
 			return empty;
 		} else if (words.length < 3 || words.length % 2 == 0) {
 			return empty;
@@ -89,5 +87,22 @@ public class Exercises {
 		returnArray[0] = middle;
 		returnArray[0] = last;
 		return returnArray;
+	}
+	
+	public boolean increasing(int numbers[] ) {
+		if(numbers == null) {
+			return false;
+		} else if (numbers.length < 1) {
+			return false;
+		}
+		for(int i = 0; i < numbers.length - 3; i++) {
+			double first = numbers[i];
+			double middle = numbers[i + 1];
+			double last = numbers[i + 2];
+			if(first > middle && middle > last) {
+				return true;
+			}
+		}
+		return false;
 	}
 }
