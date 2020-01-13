@@ -32,4 +32,19 @@ public class Exercises {
 		}
 		return a;
 	}
+	
+	public int difference(int[] numbers) {
+		if(numbers == null) {
+			return 1/0;
+		} else if(numbers.length < 1) {
+			return 1/0;
+		}
+		int maximum = numbers[0];
+		int mininum = numbers[0];
+		for(int i = 0; i < numbers.length; i++) {
+			maximum = (numbers[i] > maximum) ? numbers[i] : maximum;
+			mininum = (numbers[i] < mininum) ? numbers[i] : mininum;
+		}
+		return maximum - mininum;
+	}
 }
