@@ -47,4 +47,19 @@ public class Exercises {
 		}
 		return maximum - mininum;
 	}
+	
+	public double bigest(double[] numbers) {
+		if(numbers == null) {
+			return 1/0;
+		} else if (numbers.length < 3 || numbers.length % 2 == 0) {
+			return 1/0;
+		}
+		double first = numbers[0];
+		double middle = numbers[(numbers.length / 2) - 1];
+		double last = numbers[numbers.length - 1];
+		double maximum = (first > middle && first > last) ? first :
+		(middle > last) ? middle :
+		last;
+		return maximum;
+	}
 }
