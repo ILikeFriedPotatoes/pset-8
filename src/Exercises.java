@@ -65,8 +65,8 @@ public class Exercises {
 	
 	public String[] middle(String[] words) {
 		String[] empty = new String[0];
-		boolean containsNull = false;
 		for(int i = 0; i < words.length; i ++) {
+			boolean containsNull = false;
 			containsNull = (words[i] == null) ? true : false;
 			if(containsNull) {
 				return empty;
@@ -162,6 +162,15 @@ public class Exercises {
 	}
 	
 	public int clumps(String values[]) {
-		
+		if(values == null) {
+			return -1;
+		}
+		for(int i = 0; i < values.length; i ++) {
+			boolean containsNull = false;
+			containsNull = (values[i] == null) ? true : false;
+			if(containsNull) {
+				return -1;
+			}
+		}
 	}
 }
