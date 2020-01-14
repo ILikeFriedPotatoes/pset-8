@@ -1,5 +1,13 @@
 public class Exercises {
 	
+	/*
+	 * Given two arrays of ints, a and b, return true if the arrays have either the 
+	 * same first element or the same last element. The arrays must meet the 
+	 * following specifications, otherwise you should return false.
+	 * a and b must not be null
+	 * a and b must have a length of at least 1
+	 */
+	
 	public boolean commonEnd(int[] a, int[] b) {
 		if (a == null || a.length == 0 || b == null || b.length == 0) {
 			return false;
@@ -13,8 +21,6 @@ public class Exercises {
 			return false;
 		}
 	}
-		
-		// write your code here
 	
 	public String[] endsMeet(String[] values, int n) {
 		String[] empty = new String[0];
@@ -164,7 +170,10 @@ public class Exercises {
 	public int clumps(String values[]) {
 		if(values == null) {
 			return -1;
+		} else if(values.length < 2) {
+			return -1;
 		}
+		int clumpNum = 0;
 		for(int i = 0; i < values.length; i ++) {
 			boolean containsNull = false;
 			containsNull = (values[i] == null) ? true : false;
@@ -172,5 +181,11 @@ public class Exercises {
 				return -1;
 			}
 		}
+		for(int i = 0; i < values.length - 1; i ++) {
+			if(values[i].equals(values[i + 1])) {
+				clumpNum ++;
+			}
+		}
+		return clumpNum;
 	}
 }
