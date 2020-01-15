@@ -1,13 +1,13 @@
 public class Exercises {
-	
+
 	/*
-	 * Given two arrays of ints, a and b, return true if the arrays have either the 
-	 * same first element or the same last element. The arrays must meet the 
+	 * Given two arrays of ints, a and b, return true if the arrays have either the
+	 * same first element or the same last element. The arrays must meet the
 	 * following specifications, otherwise you should return false.
 	 * a and b must not be null
 	 * a and b must have a length of at least 1
 	 */
-	
+
 	public boolean commonEnd(int[] a, int[] b) {
 		if (a == null || a.length == 0 || b == null || b.length == 0) {
 			return false;
@@ -21,7 +21,7 @@ public class Exercises {
 			return false;
 		}
 	}
-	
+
 	public String[] endsMeet(String[] values, int n) {
 		String[] empty = new String[0];
 		if(values == null) {
@@ -38,7 +38,7 @@ public class Exercises {
 		}
 		return a;
 	}
-	
+
 	public int difference(int[] numbers) {
 		if(numbers == null) {
 			return 1/0;
@@ -53,7 +53,7 @@ public class Exercises {
 		}
 		return maximum - mininum;
 	}
-	
+
 	public double biggest(double[] numbers) {
 		if(numbers == null) {
 			return 1/0;
@@ -68,7 +68,7 @@ public class Exercises {
 		last;
 		return maximum;
 	}
-	
+
 	public String[] middle(String[] words) {
 		String[] empty = new String[0];
 		for(int i = 0; i < words.length; i ++) {
@@ -92,7 +92,7 @@ public class Exercises {
 		returnArray[0] = last;
 		return returnArray;
 	}
-	
+
 	public boolean increasing(int numbers[] ) {
 		if(numbers == null) {
 			return false;
@@ -109,7 +109,7 @@ public class Exercises {
 		}
 		return false;
 	}
-	
+
 	public boolean everywhere(int values[], int x) {
 		if(values == null) {
 			return false;
@@ -127,7 +127,7 @@ public class Exercises {
 		}
 		return true;
 	}
-	
+
 	public boolean consecutive(int numbers[]) {
 		if(numbers == null) {
 			return false;
@@ -144,7 +144,7 @@ public class Exercises {
 		}
 		return false;
 	}
-	
+
 	public boolean balance(int numbers[]) {
 		if(numbers == null) {
 			return false;
@@ -166,7 +166,7 @@ public class Exercises {
 		}
 		return false;
 	}
-	
+
 	public int clumps(String values[]) {
 		if(values == null) {
 			return -1;

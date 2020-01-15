@@ -45,9 +45,11 @@ The first exercise is partially done for you (the input verification part, anywa
 
 ## Exercises
 
-The specifications for each exercise are outlined below. Your job is to write lines of code to solve the problems and return the desired values. Your code must meet the requirements set forth in this section. Each solution must be written in its own file, and named accordingly.
+The specifications for each exercise are outlined below. Your job is to write lines of code to solve the problems and return the desired values. Your code must meet the requirements set forth in this section. Each solution must be written in its own method, and named accordingly.
 
 Work through these exercises on your own. Experiment, make mistakes, ask questions, and fix your mistakes. It's the only way to get good at programming.
+
+While each of these exercises can be solved using loops and conditional statements, the built-in methods of the `Arrays` class will surely make your lives much easier. [Read the documentation](https://docs.oracle.com/en/java/javase/12/docs/api/java.base/java/util/Arrays.html) and use these methods to help streamline your code!
 
 ### Exercise 1 (`commonEnd`)
 
@@ -68,7 +70,7 @@ Given an array of `String`s, `values`, return a new array comprised of the first
 - `values` must have a length of at least `n`
 - `n` must be a non-negative integer
 
-Use the provided `Grader.java` file to verify your code against my test cases.
+Use the provided `grader.jar` file to verify your code against my test cases.
 
 ### Exercise 3 (`difference`)
 
@@ -100,7 +102,7 @@ Use the provided `Grader.java` file to verify your code against my test cases.
 
 ### Exercise 6 (`increasing`)
 
-Given an array of `int`s, `numbers`, return `true` if there exists three consecutively increasing numbers somewhere in the array. The input array must meet the following speciications, otherwise you should return `false`.
+Given an array of `int`s, `numbers`, return `true` if there exists three consecutively increasing integers somewhere in the array. The input array must meet the following speciications, otherwise you should return `false`.
 
 - `numbers` must not be `null`
 - `numbers` must have a length of at least `3`
@@ -109,7 +111,7 @@ Use the provided `Grader.java` file to verify your code against my test cases.
 
 ### Exercise 7 (`everywhere`)
 
-Given an array of `int`s, `values`, and a target `int`, `x`, return `true` if `x` is _everywhere_ in the array. A target is defined as being _everywhere_ if it is located adjacent to every other element. The input array and target must meet the following specifications, otherwise you should return `false`. Use strict equality when making your comparisons.
+Given an array of `int`s, `values`, and a target `int`, `x`, return `true` if `x` is _everywhere_ in the array. A target is defined as being _everywhere_ if it is located adjacent to every other element. The input array and target must meet the following specifications, otherwise you should return `false`.
 
 - `values` must not be `null`
 - `values` must have a length of at least `1`
@@ -136,16 +138,28 @@ Use the provided `Grader.java` file to verify your code against my test cases.
 
 ### Exercise 10 (`clumps`)
 
-Given an array of `String`s, `values`, return the number of _clumps_ in the array. A _clump_ is defined as a consecutive series of two or more identical values. The input array must meet the following specifications, otherwise you should return `-1`. Use strict equality when making your comparisons.
+Given an array of `String`s, `values`, return the number of _clumps_ in the array. A _clump_ is defined as a consecutive series of two or more identical values. The input array must meet the following specifications, otherwise you should return `-1`.
 
 - `values` must not be `null`
 - `values` must not contain any `null` values
 
-Use the provided `Grader.java` file to verify your code against my test cases.
+Use the provided `grader.jar` file to verify your code against my test cases.
 
-## Deliverables
+## Tests
 
-Coming soon!
+To test your code, use the provided `grader.jar` file. You'll need to unzip `grader.zip`, which contains `grader.jar` and a necessary `config` folder. To run the JAR file, use the following command.
+
+```
+java -jar grader.jar
+```
+
+If you run the JAR from the same directory as your `Exercises.class` file, this will work fine. If you're running the JAR from a different directory, you'll need to add your `.class` file to my JAR file.
+
+```
+jar uf grader.jar /path/to/Exercises.class
+```
+
+It'll output the number passing test cases, as well as the input, expected output, and actual output of any failing test cases.
 
 ## Deadline
 
@@ -163,4 +177,3 @@ If you submit your problem set at midnight (i.e., January 21, 2020, at 12:00am),
 - Your code must adhere to the course style guidelines.
 
 Happy coding!
-

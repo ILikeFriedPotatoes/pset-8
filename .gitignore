@@ -1,1 +1,11 @@
-/bin/
+.classpath
+.project
+.settings/
+
+bin/
+
+src/Exercise.java
+src/Grader.java
+src/Parameter.java
+src/Staff.java
+src/Value.java
