@@ -9,8 +9,8 @@ public class Exercises {
 	 */
 
 	public boolean commonEnd(int[] a, int[] b) {
-		if (a == null || a.length < 1 || b == null || b.length < 0) {
-			return true;
+		if (a == null || a.length < 1 || b == null || b.length < 1) {
+			return false;
 		}
 		if(b.length < 0) {
 			return false;
