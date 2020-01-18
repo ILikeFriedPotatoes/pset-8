@@ -101,7 +101,7 @@ public class Exercises {
 		} else if (numbers.length < 1) {
 			return false;
 		}
-		for(int i = 0; i < numbers.length - 3; i++) {
+		for(int i = 0; i < numbers.length - 2; i++) {
 			double first = numbers[i];
 			double middle = numbers[i + 1];
 			double last = numbers[i + 2];
@@ -120,9 +120,7 @@ public class Exercises {
 		}
 		for(int i = 1; i < values.length - 1; i ++) {
 			if(values[i] != x) {
-				if(values [i - 1] != x) {
-					return false;
-				} else if(values [i + 1] != x) {
+				if(values [i - 1] != x && values [i + 1] != x) {
 					return false;
 				}
 			}
@@ -136,7 +134,7 @@ public class Exercises {
 		} else if (numbers.length < 3) {
 			return false;
 		}
-		for(int i = 0; i < numbers.length - 3; i ++) {
+		for(int i = 0; i < numbers.length - 2; i ++) {
 			if(numbers[i] % 2 == 0 && numbers[i + 1] % 2 == 0 && numbers[i + 2] % 2 == 0) {
 				return true;
 			}
@@ -156,7 +154,7 @@ public class Exercises {
 		for(int i = 0; i < numbers.length; i ++) {
 			int sumLeft = 0;
 			int sumRight = 0;
-			for(int j = 0; j < i; i ++) {
+			for(int j = 0; j < i; j ++) {
 				sumLeft += numbers[j];
 			}
 			for(int j = i; j < numbers.length; j ++) {
@@ -172,8 +170,6 @@ public class Exercises {
 	public int clumps(String values[]) {
 		if(values == null) {
 			return -1;
-		} else if(values.length < 2) {
-			return -1;
 		}
 		int clumpNum = 0;
 		for(int i = 0; i < values.length; i ++) {
@@ -184,7 +180,11 @@ public class Exercises {
 			}
 		}
 		for(int i = 0; i < values.length - 1; i ++) {
-			if(values[i].equals(values[i + 1])) {
+			if(i == 0) {
+				if(values[i].equals(values[i + 1])) {
+					clumpNum ++;
+				}
+			} else if(values[i].equals(values[i + 1]) && !(values[i].equals(values[i - 1]))) {
 				clumpNum ++;
 			}
 		}
